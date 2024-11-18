@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { Button } from "@mui/material";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +27,9 @@ export default function Home() {
           height={38}
           priority
         />
+        <Button variant="text">Text</Button>
+<Button variant="contained">Contained</Button>
+<Button variant="outlined">Outlined</Button>
         <h1>test2</h1>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">

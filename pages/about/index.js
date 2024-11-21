@@ -5,19 +5,18 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Header from "@/component/Header";
 
-export default function About() {
+const About =()=> {
   return (
     <>
     <Header/>
       <Head>
-      <title>techoceans offer best mobile and web app service</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>techoceans offer best mobile and web app service</title>
         <meta
          name="description"
          content="techoceans offer best mobile and web app service for our all over the world"
          />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
         
@@ -36,9 +35,9 @@ export default function About() {
             className={
               styles.enterbutton + " aa btn button ui btn-primary"
             }
-            href={"/about"}
+            href={"/"}
           >
-            About us
+            back to home
           </Link>
           </div>
             
@@ -63,3 +62,5 @@ export default function About() {
     </>
   );
 }
+
+export default About;

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://techoceans.vercel.app/', // Replace with your website URL
+    siteUrl: 'https://techoceans.vercel.app', // Replace with your website URL
     generateRobotsTxt: true,          // Generate robots.txt file
     changefreq: 'daily',              // How often pages change
     priority: 0.7,                    // Priority of URLs

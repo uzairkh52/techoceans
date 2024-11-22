@@ -11,13 +11,7 @@ function generateSiteMap(posts) {
      <url>
        <loc>https://jsonplaceholder.typicode.com/guide</loc>
      </url>
-     ${posts
-       .map(({ id }) => {
-         return `
-       
-     `;
-       })
-       .join('')}
+     
    </urlset>
  `;
 }
@@ -29,10 +23,9 @@ function SiteMap() {
 export async function getServerSideProps({ res }) {
   // We make an API call to gather the URLs for our site
   const request = await fetch(EXTERNAL_DATA_URL);
-  const posts = await request.json();
 
   // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
+  const sitemap = generateSiteMap(request);
 
   res.setHeader('Content-Type', 'text/xml');
   // we send the XML to the browser

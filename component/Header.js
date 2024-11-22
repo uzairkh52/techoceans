@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Script from 'next/script'
 import Head from 'next/head';
-import styles from "@/styles/sass/components/Header.module.scss"
+import styles from "./../styles/sass/components/Header.module.scss"
 import { Avatar, Container, Menu, MenuItem } from "@mui/material";
 import Link from "next/link";
 import classNames from "classnames";

@@ -12,7 +12,7 @@ const Blog =()=> {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <title>techoceans offer best mobile and web app service</title>
+        <title>techoceans offer best mobile and web app service aa</title>
         <meta
          name="description"
          content="techoceans offer best mobile and web app service for our all over the world"

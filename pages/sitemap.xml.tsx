@@ -6,7 +6,7 @@ function generateSiteMap(posts) {
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
      <url>
-       <loc>https://techoceans.vercel.app/</loc>
+       <loc>https://techoceans.vercel.app</loc>
      </url>
      
    </urlset>

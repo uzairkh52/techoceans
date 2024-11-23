@@ -12,6 +12,7 @@ const Header = () => {
     <>
 <Head>
 {/* <!-- Google tag (gtag.js) --> */}
+<meta name="google-site-verification" content="l556Qqvxm0WIu4TDeOY0EMYPtEAd6zYR0nS9JBMNWoo" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VZKN8GW1Q"></script>
 
 <script>

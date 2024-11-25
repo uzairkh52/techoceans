@@ -11,7 +11,7 @@ export default function Contact() {
     <>
     <Header/>
       <Head>
-      <title>web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>Techoceans | Contact</title>
         <meta
          name="description"
          content="we do mobile app, website development and digital marketing seo in our all over the world"
@@ -24,13 +24,13 @@ export default function Contact() {
         <Container maxWidth="sm">
           <Grid>
             <Grid item xs={12}>
-              <h1 className="uppercase align-center white f20  mb-20">Solution For Your Business</h1>
-              <h2 className="align-center  white  mb-20">Get a Website or Mobile app to Grow Your Business Fastly</h2>
+              <h1 className="uppercase align-center white f20  mb-20">Contact us</h1>
+              <h2 className="align-center  white  mb-20">for more information about to Get a Website or Mobile app to Grow Your Business Fastly</h2>
               <p className="align-center regular white">We are happy to help you. Call us for a free consultation</p>
               <div className="d-flex justify-content-center">
                 <Link
                     className={styles.enterbutton + " btn button mr-20 ui btn-white btn-md align-center"}
-                    href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"}
+                    href={"/"}
                   >
                     Back
                   </Link>
@@ -64,7 +64,7 @@ export default function Contact() {
                }
                href={"/about"}
                >
-                  Blog
+                  About us
                </Link>
             </div>
           </div>

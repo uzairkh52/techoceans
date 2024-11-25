@@ -5,38 +5,38 @@ import styles from "./../../styles/Home.module.css";
 import Link from "next/link";
 import Header from "./../../component/Header";
 import { Container, Grid } from "@mui/material";
-import Footer from "../../component/footer";
 
-
-const About =()=> {
+export default function Contact() {
   return (
     <>
     <Header/>
       <Head>
-        <title>About | techoceans</title>
+      <title>web development | mobile app development | digital marketting | mobile app and website seo </title>
         <meta
          name="description"
-         content="techoceans offer best mobile and web app service for our all over the world, we provide best Solution For Your Business and you can Get a Website or Mobile app to Grow Your Business Fastly
-         We are happy to help you. Call us for a free consultation"
+         content="we do mobile app, website development and digital marketing seo in our all over the world"
          />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="section-padding-xl basecolor1-bg">
-        <Container maxWidth="">
+        <Container maxWidth="sm">
           <Grid>
             <Grid item xs={12}>
-              <h1 className="uppercase align-center white f20  mb-20">About Techoceans</h1>
+              <h1 className="uppercase align-center white f20  mb-20">Solution For Your Business</h1>
               <h2 className="align-center  white  mb-20">Get a Website or Mobile app to Grow Your Business Fastly</h2>
               <p className="align-center regular white">We are happy to help you. Call us for a free consultation</p>
               <div className="d-flex justify-content-center">
                 <Link
-                    className={styles.enterbutton + " btn button ui btn-white btn-md align-center mr-20"}
+                    className={styles.enterbutton + " btn button mr-20 ui btn-white btn-md align-center"}
                     href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"}
                   >
-                    Call now
+                    Back
                   </Link>
                   <Link
                     className={styles.enterbutton + " btn button ui btn-white btn-md align-center"}
-                    href={"/contact"}
+                    href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"}
                   >
                     Contact Us
                   </Link>
@@ -87,9 +87,6 @@ const About =()=> {
         </main>
         
       </div>
-      <Footer />
     </>
   );
 }
-
-export default About;

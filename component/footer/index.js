@@ -1,44 +1,15 @@
 import Image from "next/image";
 import Script from 'next/script'
 import Head from 'next/head';
-import styles from "./../styles/sass/components/Header.module.scss"
+import styles from "../../styles/sass/components/Header.module.scss"
 import { Avatar, Grid, Container, Menu, MenuItem } from "@mui/material";
 import Link from "next/link";
 import classNames from "classnames";
 
-const Header = () => {
+const Footer = () => {
   
   return (
     <>
-      <Head>
-        {/* <!-- Google tag (gtag.js) --> */}
-        <meta
-          name="google-site-verification"
-          content="l556Qqvxm0WIu4TDeOY0EMYPtEAd6zYR0nS9JBMNWoo"
-        />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-5VZKN8GW1Q"
-        ></script>
-
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5VZKN8GW1Q');`}
-        </script>
-      </Head>
-      {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-JSWTFCCN6J"
-          height="0"
-          width="0"
-          className={styles.dNone + styles.hidden}
-        ></iframe>
-      </noscript>
-
       <section className="white-bg">
         <Container maxWidth="">
           <Grid>
@@ -105,6 +76,14 @@ const Header = () => {
                   <div>
                     <Link
                         className={styles.enterbutton + " btn button ui btn-white btn-md align-center"}
+                        href={"/blog"}
+                      >
+                        Blogs
+                      </Link>
+                  </div>
+                  <div>
+                    <Link
+                        className={styles.enterbutton + " btn button ui btn-white btn-md align-center"}
                         href={"/about"}
                       >
                         About
@@ -121,4 +100,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;

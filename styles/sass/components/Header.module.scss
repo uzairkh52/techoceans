@@ -1,19 +1,22 @@
 @import "../_variables.scss";
 .Header {
-  border: solid 2px red;
-}
-.headerbar {
-  padding: 10px 0 5px;
   z-index: 1;
-  .headerbarbox {
-    line-height: 1.6;
-    a {
-      line-height: 1;
-      img {
-        width: 20px;
-        height: 22px;
-      }
-    }
+  z-index: 1;
+  position: relative;
+  .Logo {
+  }
+}
+
+  .menueitems {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  .menueitem {
+    
+    text-decoration: none;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 18px;
   }
 }
 #header {
@@ -318,6 +321,7 @@
     }
   }
 }
+
 
 @media (max-width: 1200px) {
   .headerbar {

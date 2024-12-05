@@ -20,7 +20,9 @@ Colors - start
 @import "fonts.scss";
 
 // Primary color 1
-$basecolor1: #511395;
+$basecolor: #444;
+$basecolor1-dark: #6C0600;
+$basecolor1: #e7003f;
 $bc1-light: #a49bb1;
 $bc1-lighter: #dfe8f4;
 $bc1-lightest: #ecf1f9;
@@ -69,7 +71,7 @@ $darkgray: #444;
 $darkergray: #333;
 $darkestgray: #222;
 $darkestergray: #111;
-$lightgray: #888888;
+$lightgray: #f7f7f7;
 $lightergray: #aaa;
 $lightestgray: #eee;
 $lightestergray: #f6f6f6;

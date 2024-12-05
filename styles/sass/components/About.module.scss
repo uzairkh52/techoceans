@@ -1,0 +1,91 @@
+@import "../_variables.scss";
+
+.whatIsSection {
+  background-image: url("/images/svg/r-blue-double.svg");
+  .tabs {
+    border: solid 1px #ff9bb6;
+    &:hover {
+      border: solid 1px $basecolor2;
+    }
+  }
+  &.whatIsSectionBGNone {
+    background-image: none;
+  }
+  h2 {
+    color: $basecolor2;
+  }
+  padding: 0;
+  // background-image: url("/images/givingback-bg2.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  .whatIsSectionIn {
+    align-items: center !important;
+    margin: 0px auto;
+    display: table;
+    > div > div {
+      align-items: center !important;
+    }
+    .whatIsSectionBoxRow {
+      justify-content: center;
+    }
+  }
+}
+
+.HowToPlay {
+  ul li {
+    background: #f3fcff;
+    margin-bottom: 8px;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    line-height: 0.9;
+    gap: 8px;
+    align-items: flex-start;
+    .content {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+}
+.whatIsWjImg {
+  margin-bottom: 20px;
+  img {
+    max-width: 100%;
+  }
+}
+
+.screenImg {
+  max-height: 540px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .HowToPlay {
+    margin-bottom: 15px;
+    ul li {
+      line-height: 1.5;
+      font-size: 12px;
+      padding: 8px 0;
+      margin-bottom: 5px;
+      .content {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@include for-mobile-large-screen {
+  .whatIsSection {
+    background-image: none;
+    .whatIsSectionIn {
+      width: 100%;
+    }
+  }
+  .row2 {
+    margin-bottom: 15px !important;
+  }
+  .givingbackSection {
+    padding: 30px 0 !important;
+  }
+}

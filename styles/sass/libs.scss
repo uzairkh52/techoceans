@@ -114,17 +114,14 @@ h3 {
 .h4,
 h4 {
   font-size: $h4;
-  color: $black;
 }
 .h5,
 h5 {
   font-size: $h5;
-  color: $black;
 }
 .h6,
 h6 {
   font-size: $h6;
-  color: $black;
   line-height: 1.5em;
 }
 
@@ -463,8 +460,16 @@ p {
 .black {
   color: #000;
 }
+
+.basecolor1-dark {
+  background-color: $basecolor1-dark !important;
+}
+
 .basecolor1 {
   color: $basecolor1 !important;
+}
+.basecolor {
+  color: #444 !important;
 }
 .white {
   color: #fff !important;
@@ -1835,7 +1840,7 @@ body {
 .line-through {
   text-decoration: line-through;
 }
-.none {
+.text-decoration-none {
   text-decoration: none !important;
 }
 .lowercase {

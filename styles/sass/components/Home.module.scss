@@ -11,3 +11,62 @@
       border-right: solid 2px $basecolor1 !important;
    }
 }
+
+.Herosection { position: relative;
+   .Banner {
+      padding: 0 240px 40px;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+   }
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background-color:rgb(0 0 0 / 70%);
+   }
+}
+
+.Experties {
+  .box {
+    padding: 40px;
+    height: 320px;
+    padding: 30px 20px;
+    background-color: $white;
+    .thumb {
+      border-radius: 20px;
+      background-color: $basecolor2;
+      width: 110px;
+      height: 110px;
+      margin: 0px auto 20px;
+      img {
+        filter: brightness(0) invert(2);
+      }
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+
+.Portfolio {background-image: url("/images/color-bg.png");
+   .box {height: 100%;}
+}
+@include for-mobile-large-screen {
+  .HowitWork {
+    .box {
+      padding: 20px;
+      height: auto;
+    }
+  }
+}

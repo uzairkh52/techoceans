@@ -6,7 +6,9 @@ export default function handler(req, res) {
   if (req.method === "GET") {
     try {
       // Read the JSON file
-      const filePath = path.join(process.cwd(), "data", "data.json");
+      const filePath = path.join(process.cwd(), "data.json");
+      console.log("filePath", filePath);
+      
       const fileContents = fs.readFileSync(filePath, "utf8");
       const data = JSON.parse(fileContents);
 

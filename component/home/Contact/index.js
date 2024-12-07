@@ -5,20 +5,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import api from "../../../api/api";
 
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 const ContactForm = (props) => {
-    const getfunction = ()=> {
-      api.get("/api/get",) .then((res) => {
-        console.log("res:", res);
-        
-          
-        })
-        .catch((error) => {});
-    };
-  useEffect(()=> {
-    getfunction();
-  })
-
+  
   const Countries = [
     {code:"af", name: "Afghanistan (‫افغانستان‬‎)"},
        
@@ -517,23 +509,37 @@ const ContactForm = (props) => {
   const [email, setEmail] = useState();
   const [country, setCountry] = useState();
   const [message, setMessage] = useState();
-  
+  const [createdDate, setCreatedDate]= useState();
+  const [uniqueId, setUniqueId] = useState("");
+  const [submisMessage, setSubmisMessage] = useState(false);
+  const[error, setError]= useState()
+   
   const coundtryHandle =(e)=> {
     setCountry(e.target.value)
   }
   const FormSubmitHandle =(e)=> {
+    const currentDate = new Date().toISOString(); // ISO format: YYYY-MM-DDTHH:mm:ss.sssZ
+    setCreatedDate(currentDate);
+    const newId = uuidv4(); // Generate a new unique ID
     const params = {
       name: name,
       phone: phone,
       email: email,
       country: country,
       message: message,
+      createddate: createdDate,
+      id: newId,
     }
-    console.log("params:", params);
     
+      api.post("/api/posts", params) .then((res) => {
+        setSubmisMessage(true);  
+      })
+      .catch((error) => {
+        setError("Oops! Something went wrong while submitting your details. Please try again or contact us directly for assistance.");
+      });    
   }
    return (
-    <section className={styles.ContactForm + " section-padding basecolor1-dark"}>
+    <section id="contact-section" className={styles.ContactForm + " section-padding basecolor1-dark"}>
       <Container>
         <div className="align-center hgroup">
           <h2 className="mb-10 white">
@@ -546,103 +552,98 @@ const ContactForm = (props) => {
                   <div
                     className={
                       styles.box +
-                      "  br-12 lightgray-bg"
+                      "  br-12 "
                     }
                   >
-                    <Box
-                      component="form"
-                      noValidate
-                      autoComplete="off"
-                    >
-                      <Grid container spacing={3} mt={3}>
-                        <Grid  className="" item md={6} xs={12}>
-                          <TextField   
-                            fullWidth
-                            required
-                            id="outlined-required"
-                            label="Name"
-                            defaultValue={name}
-                            onChange={(e)=> setName(e.target.value)}
-                          />
-                          
+                      {submisMessage ? (
+                        
+                        <Grid container textAlign={"center"} spacing={3} mt={3}>
+                          <Box sx={{ px:30, py:10 }}  className=""  item md={12} xs={12}>
+                            <h1>Thank you</h1>
+                            <p>
+                              for reaching out! Your details have been successfully submitted. Our team will contact you shortly to discuss your project requirements.
+                            </p>
+                            </Box>
                         </Grid>
-                        <Grid  className="" item md={6} xs={12}>
-                          <TextField
-                          fullWidth
-                            required
-                            id="outlined-required"
-                            label="Phone"
-                            defaultValue={phone}
-                            onChange={(e)=> setPhone(e.target.value)}
+                      ) : (
+                        <Box
+                          component="form"
+                          noValidate
+                          autoComplete="off"
+                          sx={{ p: 4}}
+                        >
+                            <Grid container spacing={3} mt={3}>
+                              <Grid  className="" item md={6} xs={12}>
+                                <label>Name</label>
+                                <TextField   
+                                  fullWidth
+                                  required
+                                  id="outlined-required"
+                                
+                                  defaultValue={name}
+                                  onChange={(e)=> setName(e.target.value)}
+                                />
+                                
+                              </Grid>
+                              <Grid  className="" item md={6} xs={12}>
+                              <label>Phone</label>
+                                <TextField
+                                fullWidth
+                                  required
+                                  id="outlined-required"
+                                
+                                  defaultValue={phone}
+                                  onChange={(e)=> setPhone(e.target.value)}
 
-                          />
-                        </Grid>
-                        <Grid className="" item md={6} xs={12}>
-                          <TextField
-                          fullWidth
-                            required
-                            id="outlined-required"
-                            label="Email"
-                            defaultValue={email}
-                            onChange={(e)=> setEmail(e.target.value)}
-                          />
-                        </Grid>
-                        <Grid className="" item md={6} xs={12}>
-                          <TextField
-                          fullWidth
-                            required
-                            id="outlined-required"
-                            label="Message"
-                            defaultValue={message}
-                            onChange={(e)=> setMessage(e.target.value)}
-                          />
-                        </Grid>
-                        <Grid className="" item md={6} xs={12}>
-                        <FormControl fullWidth>
-        <InputLabel id="select-label">Age</InputLabel>
-        <Select
-          labelId="select-label"
-          value={"age"}
-          
-        >
-          <MenuItem value={10} selected disabled>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-                          <Select
-                          fullWidth
-                            labelId="demo-simple-select-helper-label"
-                            id="demo-simple-select-helper"
-                            value={country}
-                            label="Country"
-                            onChange={coundtryHandle}
-                          >
-                            <MenuItem disabled value="">
-                              <em>Country</em>
-                            </MenuItem>
-                          {Countries.map((getCountries)=> {
-                            return(
-                              <MenuItem value={getCountries.name}>{getCountries.name}</MenuItem>
-                            )
-                          })}
-                            
-                          </Select>
-                        </Grid>
-                        <Grid className="" item md={12} xs={12}>
-                          <Box className="d-flex justify-content-center" sx={{mt: 4}}>
-                            <Button
-                                className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}
-                                onClick={()=> FormSubmitHandle()}
-                              >
-                                Get in touch
-                              </Button>
-                          </Box>
-                        </Grid>
-                        {/*  */}
-                      </Grid>
-
+                                />
+                              </Grid>
+                              <Grid className="" item md={6} xs={12}>
+                              <label>Email</label>
+                                <TextField
+                                fullWidth
+                                  required
+                                  id="outlined-required"
+                                
+                                  defaultValue={email}
+                                  onChange={(e)=> setEmail(e.target.value)}
+                                />
+                              </Grid>
+                              <Grid className="" item md={6} xs={12}>
+                              <label>Country</label>
+                                <Select
+                                fullWidth
+                                  labelId="demo-simple-select-helper-label"
+                                  id="demo-simple-select-helper"
+                                  value={country}
+                                
+                                  onChange={coundtryHandle}
+                                >
+                                  <MenuItem disabled value="">
+                                    <em>Country</em>
+                                  </MenuItem>
+                                  {Countries.map((getCountries)=> {
+                                    return(
+                                      <MenuItem value={getCountries.name}>{getCountries.name}</MenuItem>
+                                    )
+                                  })}
+                                </Select>
+                              </Grid>
+                              
+                              
+                              <Grid className="" item md={12} xs={12}>
+                                <Box className="d-flex justify-content-center" sx={{mt: 4}}>
+                                  <Button
+                                      className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}
+                                      onClick={()=> FormSubmitHandle()}
+                                    >
+                                      Submit
+                                    </Button>
+                                </Box>
+                              </Grid>
+                              {/*  */}
+                            </Grid>
                         </Box>
+                      )}
                   </div>
                 </Grid>
               </CardContent>

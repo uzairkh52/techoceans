@@ -2375,6 +2375,9 @@ $icon50: 25px;
 [class*="section-"] {
   overflow: hidden;
 }
+.section-h {
+  padding: 0 170px;
+}
 .section-padding {
   padding: $section-padding !important;
 }
@@ -2512,6 +2515,9 @@ $icon50: 25px;
 
 // Owl carousel
 @media only screen and (max-width: 767px) {
+  .section-h {
+    padding: 0 0;
+  }
   .column-reverse-mobile {
     flex-direction: column-reverse !important;
   }

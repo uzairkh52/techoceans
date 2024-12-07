@@ -35,7 +35,7 @@ const Portfolio = (props) => {
                      <Box className="d-flex justify-content-end" sx={{mt:3}}>
                         <Link
                            className={ "  align-center text-decoration-none d-flex"}
-                           href={"/"}
+                           href={"http://metastore-demo.eba-mkpij5wk.us-west-2.elasticbeanstalk.com/accounts/login/"}
                         >
                            <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
                         </Link>
@@ -58,8 +58,8 @@ const Portfolio = (props) => {
                   
                 </div>
                 <Box sx={{mt: 3}}>
-                     <h4 className="basecolor2">Metastore Dashboard Design for store Manager and Brand Manager </h4>
-                     <p>we complete this project in preset thi is corporate employee insurance platform we have done design and development  successfully</p>
+                     <h4 className="basecolor2">corporate Insurance smartbenefits website</h4>
+                     <p>this is we have done corporate employee insurance platform which we created ui and ux we have complete this project but still working on that.</p>
                      <Box>
                         <div className="bold">Technology/tools</div>
                         <p>Figma, photoshop, html, css, javascript, jquery, wordpress, elementor, custom plugin</p>
@@ -67,7 +67,7 @@ const Portfolio = (props) => {
                      <Box className="d-flex justify-content-end" sx={{mt:3}}>
                         <Link
                            className={ "  align-center text-decoration-none d-flex"}
-                           href={"/"}
+                           href={"https://smartbenefits.pk/"}
                         >
                            <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
                         </Link>
@@ -98,7 +98,7 @@ const Portfolio = (props) => {
                      <Box className="d-flex justify-content-end" sx={{mt:3}}>
                         <Link
                            className={ "  align-center text-decoration-none d-flex"}
-                           href={"/"}
+                           href={"http://duhs.edu.pk/"}
                         >
                            <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
                         </Link>
@@ -108,6 +108,16 @@ const Portfolio = (props) => {
               </Card>
             </Grid>
          </Grid>
+         <Grid>
+            <Box className="d-flex justify-content-center" sx={{mt: 4}}>
+              <Link
+                  className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}
+                  href={"#contact-section"}
+                >
+                  Get in touch
+                </Link>
+            </Box>
+          </Grid>
       </Container>
     </section>
    );

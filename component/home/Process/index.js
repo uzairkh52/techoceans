@@ -79,6 +79,16 @@ const Experties = (props) => {
               </div>
             </Grid>
          </Grid>
+         <Grid>
+            <Box className="d-flex justify-content-center" sx={{mt: 4}}>
+              <Link
+                  className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}
+                  href={"#contact-section"}
+                >
+                  Get in touch
+                </Link>
+            </Box>
+          </Grid>
       </Container>
     </section>
    );

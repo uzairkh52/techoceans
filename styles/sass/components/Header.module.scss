@@ -1,4 +1,11 @@
 @import "../_variables.scss";
+
+.whatsapp {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
 .Header {
   z-index: 1;
   z-index: 1;
@@ -323,7 +330,36 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
+  .menueitems.active {
+    // display: block;
+  }
+  .menueitems {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: rgb(0 0 0 / 70%);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    .menueitem {
+      color: #fff;
+      font-size: 18px;
+      padding: 20px 30px;
+      text-align: left !important;
+    }
+  }
+  .menueBackdrop {
+    background: rgba($basecolor1, 0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
   .headerbar {
     position: relative;
 

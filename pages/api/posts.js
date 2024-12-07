@@ -23,7 +23,9 @@ export default function handler(req, res) {
       // Write the updated array back to the file
       fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2), "utf8");
 
-      res.status(200).json({ message: "Data saved successfully!", data: existingData });
+      res.status(200).json({ message: "Data saved successfully!", 
+         // data: existingData
+       });
     } catch (error) {
       console.error("Error saving data:", error);
       res.status(500).json({ error: "Failed to save data." });

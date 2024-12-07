@@ -62,7 +62,19 @@
 .Portfolio {background-image: url("/images/color-bg.png");
    .box {height: 100%;}
 }
+@media only screen and (max-width: 767px) {
+   .Herosection { position: relative;
+      .Banner {
+         width: 100%;
+         padding: 0;
+         height: 80vh;
+      }
+   }
+}
 @include for-mobile-large-screen {
+   .Experties {
+      .box {height: auto;}
+   }
   .HowitWork {
     .box {
       padding: 20px;

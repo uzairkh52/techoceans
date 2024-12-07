@@ -2,29 +2,29 @@ import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
 import Link from "next/link";
-import Header from "./../component/Header";
+import Header from "./../../component/Header";
 import { Container, Grid } from "@mui/material";
-import Footer from "../component/footer";
-import HeroSection from "../component/heroSection";
-import About from "../component/home/about";
-import Experties from "../component/home/Experties";
-import Process from "../component/home/Process";
+import Footer from "../../component/footer";
+import HeroSection from "../../component/heroSection";
+import About from "../../component/home/about";
+import Experties from "../../component/home/Experties";
+import Process from "../../component/home/Process";
 
 
-import styles from "../styles/sass/components/Home.module.scss";
-import Portfolio from "../component/home/Portfolio";
-import Mission from "../component/home/Mission";
-import ContactForm from "../component/home/Contact";
+import styles from "../../styles/sass/components/Home.module.scss";
+import Portfolio from "../../component/home/Portfolio";
+import Mission from "../../component/home/Mission";
+import ContactForm from "../../component/home/Contact";
 
 
-export default function Home() {
+export default function Services() {
   return (
     <>
       <Head>
-      <title>web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>Our Services | Expert Website & Mobile App Development | Digital Marketting | Website and Mobile app SEO</title>
         <meta
          name="description"
-         content="we do mobile app, website development and digital marketing seo in our all over the world"
+         content="Discover our range of professional services tailored to meet your digital needs. From stunning website development to cutting-edge mobile app solutions, we specialize in turning your ideas into reality. Let us help your business thrive in the digital world!"
          />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,10 +42,10 @@ export default function Home() {
       {/* whatsapp */}
       {/* href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"} */}
         <Experties />
-        <Process />
-        <Portfolio />
-      <About  />
       <Mission/>
+        <Process />
+      <About  />
+        <Portfolio />
       <ContactForm />
 
       <Footer/>

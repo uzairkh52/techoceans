@@ -2,29 +2,29 @@ import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
 import Link from "next/link";
-import Header from "./../component/Header";
+import Header from "./../../component/Header";
 import { Container, Grid } from "@mui/material";
-import Footer from "../component/footer";
-import HeroSection from "../component/heroSection";
-import About from "../component/home/about";
-import Experties from "../component/home/Experties";
-import Process from "../component/home/Process";
+import Footer from "../../component/footer";
+import HeroSection from "../../component/heroSection";
+import About from "../../component/home/about";
+import Experties from "../../component/home/Experties";
+import Process from "../../component/home/Process";
 
 
-import styles from "../styles/sass/components/Home.module.scss";
-import Portfolio from "../component/home/Portfolio";
-import Mission from "../component/home/Mission";
-import ContactForm from "../component/home/Contact";
+import styles from "../../styles/sass/components/Home.module.scss";
+import Portfolio from "../../component/home/Portfolio";
+import Mission from "../../component/home/Mission";
+import ContactForm from "../../component/home/Contact";
 
 
-export default function Home() {
+export default function PortfolioPage() {
   return (
     <>
       <Head>
-      <title>web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>"Our Portfolio | Website & Mobile App Development Projects | SEO | mobile app development | Digital Marketting SEO</title>
         <meta
          name="description"
-         content="we do mobile app, website development and digital marketing seo in our all over the world"
+         content="Explore our portfolio of successfully delivered projects. From innovative websites to user-friendly mobile apps, we’ve partnered with businesses across industries to create impactful digital solutions. See how we bring ideas to life with creativity, precision, and expertise."
          />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,11 +41,8 @@ export default function Home() {
       </section>
       {/* whatsapp */}
       {/* href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"} */}
-        <Experties />
-        <Process />
+        
         <Portfolio />
-      <About  />
-      <Mission/>
       <ContactForm />
 
       <Footer/>

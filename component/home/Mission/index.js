@@ -7,7 +7,7 @@ const Mission = (props) => {
    return (
     <section className={styles.Experties + " section-padding"}>
       <Container>
-        <div className="align-center hgroup">
+        <div className="align-center hgroup section-h">
           <h2 className="mb-10">
           Our Mission & Values
           </h2>
@@ -80,6 +80,16 @@ const Mission = (props) => {
               </div>
             </Grid>
             </Grid>
+            <Grid>
+            <Box className="d-flex justify-content-center" sx={{mt: 4}}>
+              <Link
+                  className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}
+                  href={"#contact-section"}
+                >
+                  Get in touch
+                </Link>
+            </Box>
+          </Grid>
       </Container>
     </section>
    );

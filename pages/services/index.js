@@ -17,7 +17,7 @@ import Mission from "../../component/home/Mission";
 import ContactForm from "../../component/home/Contact";
 
 
-export default function Services() {
+export default function ServicesPage() {
   return (
     <>
       <Head>

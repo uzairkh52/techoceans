@@ -102,7 +102,7 @@ const Header = () => {
                 
                   {!isMobile ? (
                     <>
-                      <div onClick={navbtn} className={styles.menueBackdrop}>
+                      <div onClick={navbtn} className={styles.menueBackdrop}></div>
                       <div id="menueitems" className={styles.menueitems}>
                         <Link
                           className={styles.menueitem + "  align-center"}
@@ -144,8 +144,6 @@ const Header = () => {
                         </Link>
                       </div>
                         
-                        
-                      </div>
                     </>
                   ) : 
                   ""

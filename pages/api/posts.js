@@ -23,9 +23,7 @@ export default function handler(req, res) {
       // Write the updated array back to the file
       fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2), "utf8");
 
-      res.status(200).json({ message: "Data saved successfully!", 
-         // data: existingData
-       });
+      res.status(200).json({ message: "Data saved successfully!", data: existingData });
     } catch (error) {
       console.error("Error saving data:", error);
       res.status(500).json({ error: "Failed to save data." });
@@ -33,7 +31,6 @@ export default function handler(req, res) {
   } else {
     // Handle invalid HTTP methods
     res.setHeader("Allow", ["POST"]);
-    res.setHeader("Allow", ["GET"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

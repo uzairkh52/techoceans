@@ -43,6 +43,9 @@ const Header = () => {
 
   gtag('config', 'G-5VZKN8GW1Q');`}
         </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/fav-icon.png" />
       </Head>
       {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>

@@ -26,9 +26,6 @@ export default function Home() {
          name="description"
          content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
          />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>

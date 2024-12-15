@@ -9,7 +9,7 @@ const HeroSection = (props) => {
         <Container>
           <Grid>
             <Grid item xs={12}>
-            <div className="mb-2">
+            <div className="test mb-2">
               <h1 className="uppercase align-center white f20  mb-20">{props.SubHeading}</h1>
               <h2 className="align-center white mb-20">{props.Heading}</h2>
               <p className="align-center regular white">{props.text}</p>

@@ -21,10 +21,10 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>Techoceans | web development | mobile app development | digital marketting | mobile app and website seo </title>
         <meta
          name="description"
-         content="we do mobile app, website development and digital marketing seo in our all over the world"
+         content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
          />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />

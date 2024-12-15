@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     try {
       // Fetch Google Apps Script URL from environment variables
-      const googleScriptURL = "https://script.google.com/macros/s/AKfycbxheMARijc_8QVlPqzHwShoOe9OqfTBF9NBNwcEclyEAtLf_yWjWMWZWldag0MVTEClGA/exec";
+      const googleScriptURL = "https://script.google.com/macros/s/AKfycbyadaXe2Ot9FaPiRfhpT8waeYbShda2Jfau_ed9IH92hqyTeEt8zDcO9I_gStKgNuuGsQ/exec";
 
       if (!googleScriptURL) {
         return res.status(500).json({ success: false, message: "Google Script URL is not set." });

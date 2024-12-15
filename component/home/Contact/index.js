@@ -531,7 +531,7 @@ const ContactForm = (props) => {
       id: newId,
     }
     
-      api.post("/api/posts", params) .then((res) => {
+      api.post("/api/contact", params) .then((res) => {
         setSubmisMessage(true);  
       })
       .catch((error) => {
@@ -559,7 +559,7 @@ const ContactForm = (props) => {
                         
                         <Grid container textAlign={"center"} spacing={3} mt={3}>
                           <Box sx={{ px:30, py:10 }}  className=""  item md={12} xs={12}>
-                            <h1>Thank you</h1>
+                            <h1>Thank you dear {name}</h1>
                             <p>
                               for reaching out! Your details have been successfully submitted. Our team will contact you shortly to discuss your project requirements.
                             </p>
@@ -628,6 +628,27 @@ const ContactForm = (props) => {
                                   })}
                                 </Select>
                               </Grid>
+                              <Box
+                                component="form"
+                                noValidate
+                                autoComplete="off"
+                                sx={{ p: 4}}
+                              >
+                                <Grid container spacing={3} mt={3}>
+                                  <Grid  className="" item md={6} xs={12}>
+                                    <label>Message</label>
+                                    <TextField   
+                                      fullWidth
+                                      required
+                                      id="outlined-required"
+                                    
+                                      defaultValue={message}
+                                      onChange={(e)=> setMessage(e.target.value)}
+                                    />
+                                    
+                                  </Grid>
+                                </Grid>
+                              </Box>
                               
                               
                               <Grid className="" item md={12} xs={12}>

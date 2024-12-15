@@ -570,9 +570,9 @@ const ContactForm = (props) => {
                           component="form"
                           noValidate
                           autoComplete="off"
-                          sx={{ p: 4}}
+                          sx={{ padding: { xs: 1, sm: 4 } }}
                         >
-                            <Grid container spacing={3} mt={3}>
+                            <Grid container spacing={3} mt={{xs:0, sm:2}}>
                               <Grid  className="" item md={6} xs={12}>
                                 <label>Name</label>
                                 <TextField   

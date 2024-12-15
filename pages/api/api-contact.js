@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   if (req.method === "POST") {
     // Extract form data from the request body
-    const { name, phone, email, country, message } = req.body;
+    const {id,  name, phone, email, country, message } = req.body;
 
     // Ensure required fields are provided
     if (!name || !phone || !email  || !country || !message) {
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     try {
       // Fetch Google Apps Script URL from environment variables
-      const googleScriptURL = "https://script.google.com/macros/s/AKfycbwaj9OqvLaW0cxGVSLZmkp9x-OY3dUUvgtAVhsKa9T3_MFpUtBx_2tqMoJ3R6EnsM5ZQw/exec";
+      const googleScriptURL = "https://script.google.com/macros/s/AKfycbxheMARijc_8QVlPqzHwShoOe9OqfTBF9NBNwcEclyEAtLf_yWjWMWZWldag0MVTEClGA/exec";
 
       if (!googleScriptURL) {
         return res.status(500).json({ success: false, message: "Google Script URL is not set." });
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name,  phone, email, country, message }),
+        body: JSON.stringify({ id, name,  phone, email, country, message }),
       });
 
       // Handle response from the Google Apps Script

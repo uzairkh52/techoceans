@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Container, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, } from "@mui/material";
+import { Alert, Box, Button, Card, CardContent, Container, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, } from "@mui/material";
 import Link from "next/link";
 import styles from "../../../styles/sass/components/Home.module.scss";
 import { useEffect, useState } from "react";
@@ -531,11 +531,11 @@ const ContactForm = (props) => {
       id: newId,
     }
     
-      api.post("/api/contact", params) .then((res) => {
+      api.post("/api/api-contact", params) .then((res) => {
         setSubmisMessage(true);  
       })
       .catch((error) => {
-        setError("Oops! Something went wrong while submitting your details. Please try again or contact us directly for assistance.");
+        setError("Please fill out all required fields and try again.");
       });    
   }
    return (
@@ -628,30 +628,28 @@ const ContactForm = (props) => {
                                   })}
                                 </Select>
                               </Grid>
-                              <Box
-                                component="form"
-                                noValidate
-                                autoComplete="off"
-                                sx={{ p: 4}}
-                              >
-                                <Grid container spacing={3} mt={3}>
-                                  <Grid  className="" item md={6} xs={12}>
-                                    <label>Message</label>
-                                    <TextField   
-                                      fullWidth
-                                      required
-                                      id="outlined-required"
-                                    
-                                      defaultValue={message}
-                                      onChange={(e)=> setMessage(e.target.value)}
-                                    />
-                                    
-                                  </Grid>
-                                </Grid>
-                              </Box>
-                              
+                              <Grid  className="" item md={12} xs={12}>
+                                <label>Message</label>
+                                <TextField   
+                                  fullWidth
+                                  required
+                                  id="outlined-required"
+                                  multiline
+                                  rows={3}
+                                  
+                                  defaultValue={message}
+                                  onChange={(e)=> setMessage(e.target.value)}
+                                />
+                                
+                              </Grid>
                               
                               <Grid className="" item md={12} xs={12}>
+                              {error ? (
+                                <>
+                                  <Alert  variant="filled" severity="error">{error}</Alert>
+                                </>
+                              ): ""}
+                              
                                 <Box className="d-flex justify-content-center" sx={{mt: 4}}>
                                   <Button
                                       className={styles.enterbutton + " btn button ui btn-primary btn-md align-center mr-20"}

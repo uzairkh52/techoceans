@@ -21,10 +21,10 @@ export default function PortfolioPage() {
   return (
     <>
       <Head>
-      <title>"Our Portfolio | Website & Mobile App Development Projects | SEO | mobile app development | Digital Marketting SEO</title>
+      <title>"Techoceans Portfolio | Website & Mobile App Development Projects | SEO | mobile app development | Digital Marketting SEO</title>
         <meta
          name="description"
-         content="Explore our portfolio of successfully delivered projects. From innovative websites to user-friendly mobile apps, we’ve partnered with businesses across industries to create impactful digital solutions. See how we bring ideas to life with creativity, precision, and expertise."
+         content="Explore Portfolio portfolio of successfully delivered projects. From innovative websites to user-friendly mobile apps, we’ve partnered with businesses across industries to create impactful digital solutions. See how we bring ideas to life with creativity, precision, and expertise."
          />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />

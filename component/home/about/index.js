@@ -33,7 +33,7 @@ const About = () => {
 
                     <div className="hgroup">
                       <h4 className="mb-10">Who We Are</h4>
-                      <h2 className="mb-10 basecolor">Your Partner in Digital Transformation</h2>
+                      <h2 className="mb-10 basecolor">Techoceans is Your Partner in Digital Transformation</h2>
                     </div>
                     <p>We specialize in creating seamless digital experiences through top-tier web and mobile app development. Our team of experts is passionate about turning your ideas into powerful solutions that elevate your business.</p>
                     <div>

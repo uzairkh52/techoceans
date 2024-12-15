@@ -21,11 +21,12 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-      <title>"About Us | Innovators in Website & Mobile App Development | digital marketting | mobile app and website seo</title>
+      <title>Techoceans | web development | mobile app development | digital marketting | mobile app and website seo </title>
         <meta
          name="description"
-         content="At Techoceans , we are passionate about crafting exceptional digital experiences. With a focus on innovation and quality, we specialize in developing websites and mobile apps that empower businesses to thrive in a competitive market. Our mission is to turn your vision into a reality with creativity, dedication, and cutting-edge technology. and we will do seo for your current aplication or new we will do best"
+         content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
          />
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -33,8 +34,8 @@ export default function AboutPage() {
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>
         <HeroSection
-          Heading={"Expert Web and Mobile App &  QA Solutions to grow your business"} 
-          text={"Partner with us to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. We will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."} 
+          Heading={"Techoceans Offer Expert Web and Mobile App, QA & SEO Solutions to grow your business"} 
+          text={"Partner with Techoceans to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. Techoceans will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."}
           
         />
 

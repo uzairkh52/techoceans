@@ -9,7 +9,7 @@ const Portfolio = (props) => {
       <Container>
         <div className="align-center hgroup">
           <h2 className="mb-10">
-          Our Portfolio
+          Techoceans Portfolio
           </h2>
           <p>Mobile Apps, Websites, and QA Solutions</p>
         </div>

@@ -67,6 +67,7 @@ const Header = () => {
                       width="166"
                       height="50"
                       viewBox="0 0 166 50"
+                      alt="Techoceans"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >

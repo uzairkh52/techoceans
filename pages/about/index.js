@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-      <title>Techoceans | web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>Techoceans - web development | mobile app development | digital marketting | mobile app and website seo </title>
         <meta
          name="description"
          content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
@@ -36,7 +36,7 @@ export default function AboutPage() {
         <HeroSection
           Heading={"Techoceans Offer Expert Web and Mobile App, QA & SEO Solutions to grow your business"} 
           text={"Partner with Techoceans to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. Techoceans will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."}
-          
+
         />
 
       </section>

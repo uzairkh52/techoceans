@@ -21,7 +21,7 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-      <title>Our Services | Expert Website & Mobile App Development | Digital Marketting | Website and Mobile app SEO</title>
+      <title>Techoceans - Our Services | Expert Website & Mobile App Development | Digital Marketting | Website and Mobile app SEO</title>
         <meta
          name="description"
          content="Discover our range of professional services tailored to meet your digital needs. From stunning website development to cutting-edge mobile app solutions, we specialize in turning your ideas into reality. Let us help your business thrive in the digital world!"

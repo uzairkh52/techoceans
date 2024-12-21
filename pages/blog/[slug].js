@@ -1,7 +1,7 @@
 import { Box, Card, CardMedia, Container, Grid, } from "@mui/material";
 import Link from "next/link";
 import styles from "../../styles/sass/components/Home.module.scss";
-import api, { BLOG_GET_API, BASE_URL, BLOG_GET_API_SLUG } from "../../api/api";
+import api, { BLOG_GET_API, BLOG_GET_API_SLUG } from "../../api/api";
 import { useEffect, useState } from "react";
 
 
@@ -16,7 +16,6 @@ import { useRouter } from "next/router";
 import classNames from "classnames";
 import moment from "moment";
 import Footer from "../../component/footer";
-import getConfig from "next/config";
 
 const Blog = (props) => {
   const router = useRouter();
@@ -36,16 +35,11 @@ const Blog = (props) => {
    const [ error, setError]=useState("")
    const [blogcontent ,setBlogcontent]=useState();
    
-   const { publicRuntimeConfig } = getConfig();
-   
-   const baseURL = process.env.BASE_URL || 'http://localhost:3000';
+   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL;
 
-   console.log("resss", baseURL);
-
-  
-   const getBlog =(e)=> {     
+   console.log("ress", baseURL)
+   const getBlog =(e)=> {      
      api.get(BLOG_GET_API_SLUG+slug).then((res) => {
-      
        setData(res)
        
       })

@@ -35,11 +35,11 @@ const Blog = (props) => {
    const [ error, setError]=useState("")
    const [blogcontent ,setBlogcontent]=useState();
    
-   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL;
+  //  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL;
 
-   console.log("ress", baseURL)
-   const getBlog =(e)=> {      
-     api.get(BLOG_GET_API_SLUG+slug).then((res) => {
+  const getBlog =(e)=> {      
+    api.get(BLOG_GET_API_SLUG+slug).then((res) => {
+       console.log("ress", res)
        setData(res)
        
       })

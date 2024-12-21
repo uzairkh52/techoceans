@@ -1,10 +1,10 @@
 import { google } from 'googleapis';
 import path from 'path';
 
-  // Your Google Apps Script Web App URL
-  const apiUrl = process.env.GOOGLE_SHEET_API_URL_GET_BLOG;
-  
+
 // Path to your service account credentials
+const KEY_FILE_PATH = path.join(process.cwd(), 'google-credentials.json'); // Path to the credentials JSON file
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
 export default async function handler(req, res) {
   if (req.method === 'GET') {

@@ -1,66 +1,82 @@
-import Head from "next/head";
-import Image from "next/image";
-import localFont from "next/font/local";
-import styles from "./../../styles/Home.module.css";
+import { Box, Card, CardMedia, Container, Grid, } from "@mui/material";
 import Link from "next/link";
-import Header from "./../../component/Header";
+import styles from "../../styles/sass/components/Home.module.scss";
+import api, { BLOG_GET_API } from "../../api/api";
+import { useEffect, useState } from "react";
 
-const Blog =()=> {
-  return (
+
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
+import BlogBox from "../../component/home/BlogSection/BlogBox";
+import HeroSection from "../../component/heroSection";
+import Header from "../../component/Header";
+import Head from "next/head";
+import Footer from "../../component/footer";
+
+const Blog = (props) => {
+   if (typeof window !== "undefined") {
+      window.$ = window.jQuery = require("jquery");
+    }
+    
+    const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+      ssr: false,
+    });
+
+   const[data, setData]= useState("");
+   const getBlog =(e)=> {      
+      api.get(BLOG_GET_API).then((res) => {
+         setData(res.data)
+      })
+      .catch((error) => {
+         setError("datanot found");
+      });    
+   }
+   useEffect(()=>{
+      getBlog()
+   }, []);
+   return (
     <>
-    <Header/>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>techoceans offer best mobile and web app service aa</title>
-        <meta
-         name="description"
-         content="techoceans offer best mobile and web app service for our all over the world"
-         />
-      </Head>
-      <div
+    <Head>
+      <title>Blogs</title>
+      <meta
+        name="description"
+        content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
+        />
+    </Head>
+    <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
+      <Header/>
+      <HeroSection
+        Heading={"Blogs"} 
+        text={"Our Latest Blog"}
+        button= {"hide"}
         
-      >
-        <main className={styles.main}>
-        <img style={{width:400}}  src="/images/logo.jpg" />
-        <h1>New website Lounching soon</h1>
-        
-
-          <div className={styles.ctas}>
-          <div className="flexbox jc-center flex-center flex" style={{flexDirection:"column"}}>
-
-            <h4 className="align-center" >Explore more</h4> 
-            <p style={{textAlign:"center", fontSize:14}}>please visit our facebook page for more detail if you want to purchase anything just message our inbox on whatsapp chat or call. we will response quick</p>
-            <Link
-            className={
-              styles.enterbutton + " aa btn button ui btn-primary"
-            }
-            href={"/"}
-          >
-            back to home
-          </Link>
-          </div>
+      />
+    </section>
+    <section className={styles.Experties + " " + styles.Portfolio + " section-padding lightgray-dark bg-cover bg-center bg-norepeat"}>
+      <Container>
+         {data ? (
+            <>
             
-            <ul style={{display:"flex", justifyContent:"center", listStyle:"none", gap:40, marginTop:50}}>
-              <li>
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=61568919442130"> <img style={{width:50}} src="/images/fb.svg" /></a>
-              </li>
-              <li>
-                <img style={{width:50}} src="/images/insta.svg" />
-              </li>
-              <li>
-              <a href="https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130">
-                <img style={{width:50}} src="/images/whatsapp.svg" />
-              </a>
-              
-              </li>
-            </ul>
-            </div>
-        </main>
+
+              <Grid container spacing={3} mt={3}>
+                {data.blogs.map((getData)=>{
+                  console.log("getData", getData)
+                  return (
+                    <Grid  className="" item md={4} xs={12}>
+                      <BlogBox data={getData}  />
+                    </Grid>
+                  );
+                })}
+              </Grid>
+          </>
+        ) :""}
         
-      </div>
+      </Container>
+    </section>
+    <Footer />
     </>
-  );
+   );
 }
 
 export default Blog;

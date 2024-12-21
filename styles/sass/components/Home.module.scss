@@ -12,6 +12,17 @@
    }
 }
 
+.contentBox {
+   height: 90px;
+   overflow: hidden;
+}
+.HomeBlogSection .Portfoliobox {margin-bottom: 5px;
+   .cardThumb {
+      height: 250px;
+      border-radius: 20px;
+      width: 100%;
+   }
+}
 .Herosection { position: relative;
    .Banner {
       padding: 0 240px 40px;
@@ -30,6 +41,11 @@
       height: 100%;
       background-color:rgb(0 0 0 / 70%);
    }
+}
+.whatIsSectionIn .BlogFeatureImage {
+   height: 400px;
+   border-radius: 20px;
+   width: 420px;
 }
 
 .Experties {

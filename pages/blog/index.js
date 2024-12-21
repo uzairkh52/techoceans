@@ -61,7 +61,7 @@ const Blog = (props) => {
 
               <Grid container spacing={3} mt={3}>
                 {data.blogs.map((getData)=>{
-                  console.log("getData", getData)
+                  console.log("getData111", getData)
                   return (
                     <Grid  className="" item md={4} xs={12}>
                       <BlogBox data={getData}  />

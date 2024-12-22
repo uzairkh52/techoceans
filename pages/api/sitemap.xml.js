@@ -14,6 +14,12 @@ export default function handler(req, res) {
            <changefreq>daily</changefreq>
            <priority>2.0</priority>
        </url>
+       <url>
+           <loc>https://techoceans.vercel.app/blogs/</loc>
+           <lastmod>2024-11-22</lastmod>
+           <changefreq>daily</changefreq>
+           <priority>2.0</priority>
+       </url>
    </urlset>`;
 
    // Set the correct Content-Type header

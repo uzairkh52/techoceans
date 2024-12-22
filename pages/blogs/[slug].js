@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Container, Grid, } from "@mui/material";
+import { Box, Card, CardMedia, Container, Grid, LinearProgress, Stack, } from "@mui/material";
 import Link from "next/link";
 import styles from "../../styles/sass/components/Home.module.scss";
 import api, { BLOG_GET_API, BLOG_GET_API_SLUG } from "../../api/api";
@@ -33,14 +33,16 @@ const Blog = (props) => {
    const[data, setData]= useState("");
    const[mainslug, setMainslug]= useState("");
    const [ error, setError]=useState("")
-   const [blogcontent ,setBlogcontent]=useState();
+   const [blogcontent, setBlogcontent]=useState("");
+   
    
   //  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL;
 
   const getBlog =(e)=> {      
+    console.log("ressss", blogcontent)
     api.get(BLOG_GET_API_SLUG+slug).then((res) => {
-       console.log("ress", res)
-       setData(res)
+       setBlogcontent(res?.data?.blog?.Content);
+       setData(res);
        
       })
       .catch((error) => {
@@ -48,28 +50,24 @@ const Blog = (props) => {
       });    
     }
 
-    // contwent decrease
-    const truncateContent = (html, wordLimit) => {
-      if (!html) return ""; // Handle undefined or null content safely
-  
-      const text = html.replace(/<[^>]+>/g, ""); // Strip HTML tags
-      const words = text.split(" ");
-      return words.length > wordLimit
-        ? words.slice(0, wordLimit).join(" ") + "..."
-        : text;
-    };
-    const previewContent = truncateContent(blogcontent, 50); // Limit to 10 words
-    
-    // content covert 
-    const htmlcontent = ()=> {
-      // 
-      const content = <div dangerouslySetInnerHtml={ {__html:data?.data?.blog?.Content}} />
-      setBlogcontent(content?.props?.dangerouslySetInnerHtml?.__html)
+    // Function to truncate HTML content to a word limit
+   const truncateContent = (html, wordLimit) => {
+    if (typeof html === "string") {
+      const modifiedHtml = html.replace(/<[^>]+>/g, ""); // Strip HTML tags
+      const words = modifiedHtml.split(""); // Use `modifiedHtml` here instead of `text`
+      return modifiedHtml
+    } else {
+      console.error("Expected a string, but got:", typeof html);
+      return ""; // Provide a fallback in case `html` is not a string
     }
-    
+  };
+  
+  const metaDescript = truncateContent(data?.data?.blog?.Content, 40); // Limit to 10 words   
+  
+  
     
     useEffect(() => {
-      htmlcontent()
+      
       truncateContent()
       if (slug) {
         getBlog(slug);
@@ -82,7 +80,7 @@ const Blog = (props) => {
       <title>{data?.data?.blog?.Title}</title>
       <meta
         name="description"
-        content={previewContent}
+        content={metaDescript}
       />
       <link rel="canonical" href={`https://techoceans.vercel.app//blog/${slug}`} />
       <script
@@ -113,10 +111,11 @@ const Blog = (props) => {
         
       />
     </section>
+    {data?.data?.blog ? (
+    <>
     <section className={styles.Experties + " " + styles.Portfolio + " section-padding lightgray-dark bg-cover bg-center bg-norepeat"}>
-    
       <Container>
-      <div
+      <section
         className={
           styles.whatIsSection +
           " br-20 brd-bc1-lighter  white-bg section-padding-sm mb-30"
@@ -126,12 +125,13 @@ const Blog = (props) => {
           <div className={styles.whatIsSectionIn}>
             <div className={styles.whatIsSectionBox}>
               <Grid container spacing={3}>
+                  
                 
-                  <Grid item lg={5} md={5} xs={12} className=" d-flex justify-content-start pl-50">
-                    <div className={styles.BlogFeatureImage + " align-center bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${data?.data?.blog?.featuredImage})`}}>
-                    </div>
-                  </Grid>
-                  <Grid item md={7} xs={12}>
+                <Grid item lg={5} md={5} xs={12} className=" d-flex justify-content-start pl-50">
+                  <div className={styles.BlogFeatureImage + " align-center bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${data?.data?.blog?.featuredImage})`}}>
+                  </div>
+                </Grid>
+                <Grid item md={7} xs={12}>
                   <Box >
 
                     <div className="hgroup mb-50 mt-30">
@@ -161,25 +161,30 @@ const Blog = (props) => {
                         />
                     </Link>
                   </Box>
-                  
                 </Grid>
-                
               </Grid>
             </div>
           </div>
         </Container>
         
-      </div>
+      </section>
       <div className="hgroup">
-          {blogcontent}
-      {console.log("previewContent", previewContent)}
-        </div>
-        
+        <div dangerouslySetInnerHTML={{ __html: blogcontent }} />  
+      </div>
       </Container>
     </section>
+    </>
+    ): (
+      <>
+      <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
+        <LinearProgress color="inherit" />
+        <LinearProgress color="inherit" />
+
+        <LinearProgress color="inherit" />
+      </Stack>
+      </>
+    )}
     <Footer/>
-
-
     </>
    );
 }

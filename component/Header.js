@@ -132,9 +132,9 @@ const Header = () => {
                         </Link>
                         <Link
                           className={styles.menueitem + "  align-center"}
-                          href={"/contact"}
+                          href={"/blogs"}
                         >
-                          Blog
+                          Blogs
                         </Link>
                         <Link
                           className={styles.menueitem + "  align-center"}

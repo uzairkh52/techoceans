@@ -54,7 +54,7 @@ const ContactForm = (props) => {
       console.log("slug", slug); 
     
     
-      api.post("/api/api-blog", params) .then((res) => {
+      api.post("/api-blog", params) .then((res) => {
         setSubmisMessage(true);  
       })
       .catch((error) => {

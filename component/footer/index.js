@@ -60,8 +60,8 @@ const Footer = () => {
                 <h4 className="white bold">Resources</h4>
                 <ul className="no-list hgroup">
                   <li>
-                    <Link href="/blog">
-                      Blog
+                    <Link href="/blogs">
+                      Blogs
                     </Link>
                   </li>
                   <li>

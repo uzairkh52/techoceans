@@ -15,7 +15,12 @@ function generateSiteMap(posts) {
       <lastmod>2024-11-20</lastmod>
       <priority>0.8</priority>
    </url>
-     
+   <url>
+           <loc>https://techoceans.vercel.app/blogs/</loc>
+           <lastmod>2024-11-22</lastmod>
+           <changefreq>daily</changefreq>
+           <priority>2.0</priority>
+       </url>  
    </urlset>
  `;
 }

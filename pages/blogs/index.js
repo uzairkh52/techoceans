@@ -52,6 +52,7 @@ const Blogs = (props) => {
     <>
     <Head>
       <title>Blogs</title>
+      <meta name="robots" content="index, follow" />
       <meta
         name="description"
         content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"

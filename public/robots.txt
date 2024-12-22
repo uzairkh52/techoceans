@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://techoceans.vercel.app/sitemap.xml

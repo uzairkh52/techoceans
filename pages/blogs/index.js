@@ -35,10 +35,7 @@ const Blogs = (props) => {
           const dateB = new Date(b.date || 0).getTime();
           return dateB - dateA;
         });
-        
-        
         setData({ blogs: sortedBlogs });
-        
     })
     .catch((error) => {
       console.error("Data not found", error);

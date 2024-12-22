@@ -1,5 +1,10 @@
 module.exports = {
-   publicRuntimeConfig: {
-     BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
-   },
- };
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/api/robots.txt',
+      },
+    ];
+  },
+};

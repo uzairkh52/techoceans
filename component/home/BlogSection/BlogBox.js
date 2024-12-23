@@ -16,13 +16,12 @@ const BlogBox = (props) => {
           ? words.slice(0, wordLimit).join(" ") + "..."
           : modifiedHtml; // Return `modifiedHtml` if it's within the limit
       } else {
-        console.error("Expected a string, but got:", typeof html);
+        
         return ""; // Provide a fallback in case `html` is not a string
       }
     };
     
     const previewContent = truncateContent(props.data.Content, 20); // Limit to 10 words   
-    console.log("test12", previewContent); 
     useEffect(() => {
       // htmlcontent()
       truncateContent()
@@ -59,7 +58,7 @@ const BlogBox = (props) => {
                      className={ "  align-center text-decoration-none d-flex"}
                      href={"blogs/"+props.data.slug}
                   >
-                     <span>Read more </span> <i class="icofont icofont-long-arrow-right f30"></i>
+                     <span>Read more </span> <i className="icofont icofont-long-arrow-right f30"></i>
                   </Link>
 
                </Box>

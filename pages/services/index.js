@@ -20,35 +20,29 @@ import ContactForm from "../../component/home/Contact";
 export default function ServicesPage() {
   return (
     <>
-      <Head>
-      <title>Techoceans - Our Services | Expert Website & Mobile App Development | Digital Marketting | Website and Mobile app SEO</title>
-        <meta
-         name="description"
-         content="Discover our range of professional services tailored to meet your digital needs. From stunning website development to cutting-edge mobile app solutions, we specialize in turning your ideas into reality. Let us help your business thrive in the digital world!"
-         />
+    <Head>
+      <title>Techoceans Services: Web & Mobile App Development, UI/UX Design, QA, and More</title>
+      <meta name="description" content="Explore Techoceans' comprehensive services, including web design and development, UI/UX design, website migration, app development, quality assurance, and email marketing. Partner with us to elevate your digital presence." />
+    </Head>
+    <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
+      <Header/>
+      <HeroSection
+        Heading={"Comprehensive Digital Solutions for Your Business"} 
+        text={"From web and app development to UI/UX design and digital marketing, Techoceans offers a full suite of services to bring your ideas to life."} 
+        
+      />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
-        <Header/>
-        <HeroSection
-          Heading={"Expert Web and Mobile App &  QA Solutions to grow your business"} 
-          text={"Partner with us to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. We will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."} 
-          
-        />
+    </section>
+    {/* whatsapp */}
+    {/* href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"} */}
+    <Experties />
+    <Mission/>
+      <Process />
+    <About  />
+      <Portfolio />
+    <ContactForm />
 
-      </section>
-      {/* whatsapp */}
-      {/* href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"} */}
-        <Experties />
-      <Mission/>
-        <Process />
-      <About  />
-        <Portfolio />
-      <ContactForm />
-
-      <Footer/>
+    <Footer/>
     </>
   );
 }

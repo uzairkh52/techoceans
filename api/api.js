@@ -7,7 +7,6 @@ export const BLOG_POST_API = "https://script.google.com/macros/s/AKfycbz4GnmS-Ai
 
 export const BASE_URL="https://yourdomain.com";
 
-console.log("alert")
 process.env.NODE_ENV === "development"
   ? (axios.defaults.baseURL = "http://localhost:3000/api/")
   : (axios.defaults.baseURL = "https://techoceans.vercel.app/api/");

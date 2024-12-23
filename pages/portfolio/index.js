@@ -21,11 +21,9 @@ export default function PortfolioPage() {
   return (
     <>
       <Head>
-      <title>"Techoceans Portfolio | Website & Mobile App Development Projects | SEO | mobile app development | Digital Marketting SEO</title>
-        <meta
-         name="description"
-         content="Explore Portfolio portfolio of successfully delivered projects. From innovative websites to user-friendly mobile apps, we’ve partnered with businesses across industries to create impactful digital solutions. See how we bring ideas to life with creativity, precision, and expertise."
-         />
+      <title>Techoceans Portfolio: Showcasing Our Web and Mobile App Development Projects</title>
+      <meta name="description" content="Explore Techoceans portfolio featuring successful web and mobile app development projects, including Metastore Dashboard, SmartBenefits website, and Dow University of Health Sciences platform."/>
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -33,9 +31,8 @@ export default function PortfolioPage() {
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>
         <HeroSection
-          Heading={"Expert Web and Mobile App &  QA Solutions to grow your business"} 
-          text={"Partner with us to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. We will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."} 
-          
+          Heading={"Showcasing Our Digital Expertise"} 
+          text={"From stunning designs to seamless functionality, our portfolio highlights the diverse range of solutions we’ve delivered for our clients."}
         />
 
       </section>

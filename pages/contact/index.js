@@ -21,20 +21,17 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-      <title>Get in Touch | Techoceans</title>
+      <title>Connect with Techoceans: Start Your Digital Journey Today</title>
         <meta
          name="description"
-         content="Have a project in mind? Whether you need a custom website, a powerful mobile app, and digital marketing seo for your project, our team is here to help. Contact us today to start your journey toward success!"
+         content="Reach out to Techoceans for innovative web and app development, design, and marketing services. Contact us to turn your vision into reality with expert digital solutions."
          />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>
         <HeroSection
-          Heading={"Expert Web and Mobile App &  QA Solutions to grow your business"} 
-          text={"Partner with us to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. We will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."} 
+          Heading={"Let’s Build Something Extraordinary Together"} 
+          text={"Have a project in mind? Reach out to Techoceans, and let’s create innovative digital solutions tailored to your needs."}
           
         />
 

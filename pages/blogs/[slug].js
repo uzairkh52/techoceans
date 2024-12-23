@@ -39,7 +39,6 @@ const Blog = (props) => {
   //  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL;
 
   const getBlog =(e)=> {      
-    console.log("ressss", blogcontent)
     api.get(BLOG_GET_API_SLUG+slug).then((res) => {
        setBlogcontent(res?.data?.blog?.Content);
        setData(res);
@@ -57,7 +56,7 @@ const Blog = (props) => {
       const words = modifiedHtml.split(""); // Use `modifiedHtml` here instead of `text`
       return modifiedHtml
     } else {
-      console.error("Expected a string, but got:", typeof html);
+      
       return ""; // Provide a fallback in case `html` is not a string
     }
   };

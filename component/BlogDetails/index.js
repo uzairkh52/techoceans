@@ -10,7 +10,6 @@ const BlogDetails = ({ slug }) => {
       const data = await response.json();
       setBlog(data.blog);
       setLoading(false);
-      console.log("data111", response);
       
     };
 

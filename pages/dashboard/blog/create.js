@@ -50,9 +50,7 @@ const ContactForm = (props) => {
        slug: generatedSlug,
        
       }
-      console.log("params", currentDate);
-      console.log("slug", slug); 
-    
+      
     
       api.post("/api-blog", params) .then((res) => {
         setSubmisMessage(true);  

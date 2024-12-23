@@ -37,7 +37,7 @@ const Portfolio = (props) => {
                            className={ "  align-center text-decoration-none d-flex"}
                            href={"http://metastore-demo.eba-mkpij5wk.us-west-2.elasticbeanstalk.com/accounts/login/"}
                         >
-                           <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
+                           <span>See project</span> <i className="icofont icofont-long-arrow-right f30"></i>
                         </Link>
 
                      </Box>
@@ -69,7 +69,7 @@ const Portfolio = (props) => {
                            className={ "  align-center text-decoration-none d-flex"}
                            href={"https://smartbenefits.pk/"}
                         >
-                           <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
+                           <span>See project</span> <i className="icofont icofont-long-arrow-right f30"></i>
                         </Link>
 
                      </Box>
@@ -100,7 +100,7 @@ const Portfolio = (props) => {
                            className={ "  align-center text-decoration-none d-flex"}
                            href={"http://duhs.edu.pk/"}
                         >
-                           <span>See project</span> <i class="icofont icofont-long-arrow-right f30"></i>
+                           <span>See project</span> <i className="icofont icofont-long-arrow-right f30"></i>
                         </Link>
 
                      </Box>

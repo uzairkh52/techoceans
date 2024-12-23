@@ -44,7 +44,6 @@ const Blogs = (props) => {
       setIsLoading(false);
     });
    }
-   console.log("sortedBlogs", data.blogs);
    useEffect(()=>{
       getBlog()
    }, []);
@@ -73,7 +72,6 @@ const Blogs = (props) => {
           <>
           <Grid container spacing={3} mt={3}>
               {data.blogs.map((getData)=>{
-                console.log("getData111", getData)
                 return (
                   <Grid  className="" item md={4} xs={12}>
                     <BlogBox data={getData}  />

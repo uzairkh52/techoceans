@@ -1,14 +1,14 @@
 export default async function handler(req, res) {
   const { slug } = req.query;
 
-  console.log("Received slug:", slug); // Log the slug to debug
+
 
   const googleScriptUrl =
     "https://script.google.com/macros/s/AKfycbz17n6Sop5r_wyCyvmC_pk8Gf7TK43SliPOROB9mxfaGvjFL1WmmHe2g4IIPwfgR0ei_A/exec";
 
   try {
     const url = slug ? `${googleScriptUrl}?slug=${slug}` : googleScriptUrl;
-    console.log("Fetching from URL:", url); // Log the full URL being fetched
+
     const response = await fetch(url);
     const data = await response.json();
 

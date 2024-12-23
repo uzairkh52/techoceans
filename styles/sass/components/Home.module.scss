@@ -19,13 +19,13 @@
 .HomeBlogSection .Portfoliobox {margin-bottom: 5px;
    .cardThumb {
       height: 250px;
-      border-radius: 20px;
+      border-radius: 15px;
       width: 100%;
    }
 }
 .Herosection { position: relative;
    .Banner {
-      padding: 0 240px 40px;
+      padding: 0 270px 40px;
       height: 60vh;
       display: flex;
       align-items: center;
@@ -79,17 +79,24 @@
    .box {height: 100%;}
 }
 @media only screen and (max-width: 767px) {
+   
+   .HomeBlogSection .Portfoliobox {margin-bottom: 5px;
+      .cardThumb {
+         height: 180px;
+      }
+   }
    .Herosection { position: relative;
       .Banner {
-         width: 100%;
-         padding: 0;
-         height: 80vh;
+        width: 100%;
+        height: auto;
+        padding: 3vh 0 8vh;
       }
    }
 }
 @include for-mobile-large-screen {
    .Experties {
-      .box {height: auto;}
+      .box {height: auto;padding: 20px 15px;
+      }
    }
   .HowitWork {
     .box {

@@ -49,21 +49,20 @@ const BlogSection = (props) => {
           </h2>
         </div>
 
-        {console.log("data111", data)}
          {!isLoading  ? (
             <> 
             <OwlCarousel
                 className={styles.CreatorSLider + "  owl-theme mb-hide-nav"}
-                loop={false}
+                loop={true}
                 margin={10}
                 nav={true}
                 dots={false}
                 responsive={{
                   0: {
-                    items: 1.4,
+                    items: 1.2,
                   },
                   480: {
-                    items: 1.4,
+                    items: 1.2,
                   },
                   768: {
                     items: 3,
@@ -74,7 +73,6 @@ const BlogSection = (props) => {
                 }}
               >
                 {data.blogs.slice(0, 10).map((getData)=>{
-                    console.log("getData", getData)
                     return (
                       <BlogBox data={getData}  />
                     );

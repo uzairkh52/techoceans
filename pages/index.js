@@ -31,8 +31,8 @@ export default function Home() {
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>
         <HeroSection
-          Heading={"Techoceans Offer Expert Web and Mobile App, QA & SEO Solutions to grow your business"} 
-          text={"Partner with Techoceans to create stunning websites and innovative mobile apps according to your business goals, and make any changes to your project. Techoceans will do the best for you in an innovative way. rigorously test to ensure flawless digital experiences for your business."}
+          Heading={"Transform Your Digital Presence"} 
+          text={"From innovative web design to powerful mobile apps and SEO strategies, we create solutions that drive results and elevate your brand."}
           
         />
 

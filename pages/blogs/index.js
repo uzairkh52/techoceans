@@ -51,12 +51,12 @@ const Blogs = (props) => {
    return (
     <>
     <Head>
-      <title>Blogs</title>
+      <title>Techoceans Blog | Insights on Web & Mobile Development, QA, and SEO</title>
       <meta name="robots" content="index, follow" />
       <meta
         name="description"
-        content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
-        />
+        content="Explore expert articles and the latest trends in web design, mobile app development, quality assurance, and SEO strategies. Stay informed with Techoceans' insights to elevate your digital presence."
+      />
     </Head>
     <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
       <Header/>

@@ -56,6 +56,7 @@ const Blogs = (props) => {
         name="description"
         content="Explore expert articles and the latest trends in web design, mobile app development, quality assurance, and SEO strategies. Stay informed with Techoceans' insights to elevate your digital presence."
       />
+        <link rel="canonical" href="https://techoceans.vercel.app/blogs" />
     </Head>
     <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
       <Header/>

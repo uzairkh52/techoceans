@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /blog
+Allow: /blogs
 Disallow: /api/
 Disallow: /private/
 

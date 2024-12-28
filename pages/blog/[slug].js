@@ -73,9 +73,9 @@ const Blog = ({ data, metaDescript }) => {
         <NextSeo
           title={data?.blog?.Title}
           description={metaDescript}
-          canonical={`https://techoceans.vercel.app/blogs/${slug}`}
+          canonical={`https://techoceans.vercel.app/blog/${slug}`}
           openGraph={{
-            url: `https://techoceans.vercel.app/blogs/${slug}`,
+            url: `https://techoceans.vercel.app/blog/${slug}`,
             title: data?.blog?.Title,
             description: metaDescript,
             images: [
@@ -98,7 +98,7 @@ const Blog = ({ data, metaDescript }) => {
       <HeroSection
         Heading={"Blog"} 
         buttonTitle= {"Back to all Blogs"}
-        buttonLink= {"/blogs"}
+        buttonLink= {"/blog"}
       />
 
     </section>

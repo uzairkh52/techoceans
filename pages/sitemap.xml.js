@@ -8,7 +8,7 @@ function generateSiteMap() {
    // <lastmod>${new Date(post.date).toISOString()}</lastmod>
     { loc: `${EXTERNAL_DATA_URL}/`, lastmod: '2024-11-22', priority: '1.0' }, // Homepage
     { loc: `${EXTERNAL_DATA_URL}/about`, lastmod: '2024-11-20', priority: '0.8' }, // About page
-    { loc: `${EXTERNAL_DATA_URL}/blogs/`, lastmod: '2024-11-22', changefreq: 'daily', priority: '0.9' }, // Blog index page
+    { loc: `${EXTERNAL_DATA_URL}/blog/`, lastmod: '2024-11-22', changefreq: 'daily', priority: '0.9' }, // Blog index page
   ];
 
   // Create the XML string for static URLs

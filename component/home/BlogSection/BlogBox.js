@@ -40,7 +40,7 @@ const BlogBox = (props) => {
          >
          
             <Link className="text-decoration-none "
-               href={"blogs/"+props.data.slug}
+               href={"blog/"+props.data.slug}
             >
                <div  aria-label={props.data.Title} className={styles.cardThumb + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${props.data.featuredImage})`}}>
                </div>
@@ -54,7 +54,7 @@ const BlogBox = (props) => {
                <div className="bold">{props.data.category}</div>
                <Box className={styles.contentBox +" mt-10"}>
                   <Link className="text-decoration-none "
-                     href={"blogs/"+props.data.slug}
+                     href={"blog/"+props.data.slug}
                   >
                      <h4 className="mb-0 basecolor2">{props.data.Title}</h4>
                   </Link>
@@ -63,7 +63,7 @@ const BlogBox = (props) => {
                <Box className="d-flex justify-content-end" sx={{mt:3}}>
                   <Link
                      className={ "  align-center text-decoration-none d-flex"}
-                     href={"blogs/"+props.data.slug}
+                     href={"blog/"+props.data.slug}
                   >
                      <span>Read more </span> <i className="icofont icofont-long-arrow-right f30"></i>
                   </Link>

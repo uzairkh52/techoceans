@@ -30,7 +30,7 @@ const Header = () => {
         
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <meta
           name="google-site-verification"
           content="l556Qqvxm0WIu4TDeOY0EMYPtEAd6zYR0nS9JBMNWoo"
@@ -134,9 +134,9 @@ const Header = () => {
                         </Link>
                         <Link
                           className={styles.menueitem + "  align-center"}
-                          href={"/blogs"}
+                          href={"/blog"}
                         >
-                          Blogs
+                          Blog
                         </Link>
                         <Link
                           className={styles.menueitem + "  align-center"}

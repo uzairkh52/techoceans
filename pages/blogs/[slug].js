@@ -7,6 +7,8 @@ import moment from "moment";
 import Footer from "../../component/footer";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
+import Header from "../../component/Header";
+import HeroSection from "../../component/heroSection";
 
 // The Blog component
 // Fetch blog data on the server-side
@@ -91,7 +93,14 @@ const Blog = ({ data, metaDescript }) => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://techoceans.vercel.app/blog/${slug}`} />
       </Head>
+      <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
+      <Header/>
+      <HeroSection
+        Heading={"Blog"} 
+        button= {"hide"}
+      />
 
+    </section>
       <section
         aria-label={data?.blog?.Title}
         className={styles.Herosection + " bg-cover bg-center bg-norepeat"}

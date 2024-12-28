@@ -17,7 +17,7 @@ const HeroSection = (props) => {
               <Box sx={{mt:4}} className="d-flex justify-content-center ">
                 <Link
                     className={styles.enterbutton + " " + `${props.button}`+  " btn button ui btn-primary btn-md align-center"}
-                    href={"/contact"}
+                    href={props.buttonLink ? props.buttonLink : "/contact"}
                   >
                     {props.buttonTitle ? props.buttonTitle : "Get in touch"} 
                   </Link>

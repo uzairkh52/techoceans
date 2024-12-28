@@ -16,11 +16,13 @@ import { useRouter } from "next/router";
 import classNames from "classnames";
 import moment from "moment";
 import Footer from "../../component/footer";
+import { NextSeo } from "next-seo";
 
 const Blog = (props) => {
+  
   const router = useRouter();
   const {slug}  = router.query;
-  console.log("aaa", slug);
+  
 
    if (typeof window !== "undefined") {
       window.$ = window.jQuery = require("jquery");
@@ -76,6 +78,26 @@ const Blog = (props) => {
    return (
     <>
     <Head>
+    {console.log("aaa", slug)}
+    <NextSeo
+      title={data?.data?.blog?.Title}
+      description={metaDescript}
+      canonical={`https://yourdomain.com/blogs/${slug}`}
+      openGraph={{
+        url: `https://yourdomain.com/blogs/${slug}`,
+        title: data?.data?.blog?.Title,
+        description: metaDescript,
+        images: [
+          {
+            url: data?.data?.blog?.featuredImage,
+            width: 800,
+            height: 600,
+            alt: data?.data?.blog?.Title,
+          },
+        ],
+        site_name: "YourSiteName",
+      }}
+    />
       <title>{data?.data?.blog?.Title}</title>
       <meta
         name="description"
@@ -90,7 +112,7 @@ const Blog = (props) => {
               "@type": "BlogPosting",
               headline: data?.data?.blog?.Title,
               description: blogcontent,
-              url: `https://techoceans.vercel.app//blog/${slug}`,
+              url: `https://techoceans.vercel.app/blog/${slug}`,
               datePublished: data?.data?.blog?.date,
               author: {
                 "@type": "Person",
@@ -101,7 +123,7 @@ const Blog = (props) => {
         />
 
     </Head>
-    <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${data?.data?.blog?.featuredImage})`}}>
+    <section aria-label={data?.data?.blog?.Title} className={styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${data?.data?.blog?.featuredImage})`}}>
       <Header/>
       <HeroSection
         Heading={"Blogs"} 

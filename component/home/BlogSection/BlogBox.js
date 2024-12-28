@@ -39,9 +39,12 @@ const BlogBox = (props) => {
             }
          >
          
-            <div className={styles.cardThumb + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${props.data.featuredImage})`}}>
-            
-            </div>
+            <Link className="text-decoration-none "
+               href={"blogs/"+props.data.slug}
+            >
+               <div  aria-label={props.data.Title} className={styles.cardThumb + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${props.data.featuredImage})`}}>
+               </div>
+            </Link>
             <Box sx={{mt: 3}}>
             <div className="f12">
                {moment(props.data.date).format(
@@ -50,7 +53,11 @@ const BlogBox = (props) => {
             </div>
                <div className="bold">{props.data.category}</div>
                <Box className={styles.contentBox +" mt-10"}>
-                  <h4 className="mb-0 basecolor2">{props.data.Title}</h4>
+                  <Link className="text-decoration-none "
+                     href={"blogs/"+props.data.slug}
+                  >
+                     <h4 className="mb-0 basecolor2">{props.data.Title}</h4>
+                  </Link>
                   <p>{previewContent}</p>
                </Box>
                <Box className="d-flex justify-content-end" sx={{mt:3}}>

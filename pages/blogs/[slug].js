@@ -97,7 +97,7 @@ const Blog = ({ data, metaDescript }) => {
       <Header/>
       <HeroSection
         Heading={"Blog"} 
-        button= {"hide"}
+        buttonTitle= {"Back to all Blogs"}
       />
 
     </section>

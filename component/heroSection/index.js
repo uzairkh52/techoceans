@@ -19,7 +19,7 @@ const HeroSection = (props) => {
                     className={styles.enterbutton + " " + `${props.button}`+  " btn button ui btn-primary btn-md align-center"}
                     href={"/contact"}
                   >
-                    Get in touch
+                    {props.buttonTitle ? props.buttonTitle : "Get in touch"} 
                   </Link>
               </Box>
             </Grid>

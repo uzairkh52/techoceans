@@ -72,9 +72,9 @@ const BlogSection = (props) => {
                   },
                 }}
               >
-                {data.blogs.slice(0, 10).map((getData)=>{
+                {data.blogs.slice(0, 10).map((getData, i)=>{
                     return (
-                      <BlogBox data={getData}  />
+                      <BlogBox data={getData} key={i}  />
                     );
                 })}
               </OwlCarousel>

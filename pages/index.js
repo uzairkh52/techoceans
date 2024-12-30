@@ -47,6 +47,10 @@ export default function Home() {
          name="description"
          content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
          />
+          <meta name="description" content="Web development, mobile app development, SEO services for your digital growth." />
+          <meta name="keywords" content="web development, mobile app development, SEO services, digital marketing" />
+          <meta name="author" content="Techoceans" />
+          
          <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

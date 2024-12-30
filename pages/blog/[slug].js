@@ -13,7 +13,7 @@ import HeroSection from "../../component/heroSection";
 // The Blog component
 // Fetch blog data on the server-side
 export async function getServerSideProps(context) {
-  
+   // JSON-LD schema markup for the blog post
   const { slug } = context.params; // Get the slug from URL params
   
   try {
@@ -67,6 +67,32 @@ const Blog = ({ data, metaDescript }) => {
     );
   }
 
+  console.log("aaaa", data?.blog);
+  
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": data?.blog?.Title,
+    "description": metaDescript,
+    // "image": post.imageUrl,
+    "author": {
+      "@type": "Person",
+      "name": data?.blog?.Author,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Techoceans",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://techoceans.vercel.app/logo.png",
+      },
+    },
+    "datePublished": data?.blog?.date,
+    // "dateModified": post.modifiedDate,
+    "url": `https://techoceans.vercel.app/blog/${slug}`,
+  };
+  
+
   return (
     <>
       <Head>
@@ -89,9 +115,17 @@ const Blog = ({ data, metaDescript }) => {
             site_name: "sitemap.xml",
           }}
         />
+        <title>{data?.blog?.Title}</title>
+
         <meta name="description" content={metaDescript} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://techoceans.vercel.app/blog/${slug}`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaMarkup),
+          }}
+        />
       </Head>
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
       <Header/>

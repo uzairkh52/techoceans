@@ -19,6 +19,26 @@ import BlogSection from "../component/home/BlogSection";
 
 
 export default function Home() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Techoceans",
+    "image": "https://techoceans.vercel.app/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1234 Ocean Street",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "postalCode": "75500",
+      "addressCountry": "PK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+92-300-1234567",
+      "contactType": "Customer Service"
+    },
+    "url": "https://techoceans.vercel.app",
+  };
   return (
     <>
       <Head>
@@ -27,6 +47,12 @@ export default function Home() {
          name="description"
          content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
          />
+         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
       </Head>
       <section className= {styles.Herosection + " bg-cover bg-center bg-norepeat"} style={{ backgroundImage: "url(/images/banner-home.png)"}}>
         <Header/>

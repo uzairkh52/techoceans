@@ -1,9 +1,12 @@
 import { Box, Container, Grid, } from "@mui/material";
 import Link from "next/link";
 import styles from "../../../styles/sass/components/Home.module.scss";
+import { useEffect } from "react";
+import lozad from "lozad";
 
 
 const Experties = (props) => {
+  
    return (
     <section className={styles.Experties + " section-padding"}>
       <Container>
@@ -13,7 +16,7 @@ const Experties = (props) => {
           </h2>
         </div>
         <Grid container spacing={3} mt={3}>
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -21,16 +24,17 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Web-Design-Development-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img 
+                     className="lozad" data-src="/images/Web-Design-Development-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Web Design / Development</h4>
+                  <h3 className="basecolor2 h5">Web Design / Development</h3>
                   <p>We specialize in creating websites that captivate, convert and inspire. Visually stunning: designs that leave a lasting impression Performance optimized: fast loading, responsive, and optimized for all devices</p>
                 </div>
               </div>
             </Grid>
             {/*  */}
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -38,15 +42,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/UX-Design-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/UX-Design-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">UI/UX Design</h4>
+                  <h3 className="basecolor2 h5">UI/UX Design</h3>
                   <p>We not only elevate your brand with stunning UI/UX design, but also make it visually appealing, intuitive, functional and memorable, making every interaction count with exceptional UI/UX.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -54,15 +58,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Website-Migration-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/Website-Migration-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Website Migration</h4>
+                  <h3 className="basecolor2 h5">Website Migration</h3>
                   <p>Now is the time to migrate your website to a new platform, host or design, we specialize in website migration services that provide a smooth, secure, and Ensure efficient transfer.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -70,15 +74,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/App-Development-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/App-Development-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">App Development</h4>
+                  <h3 className="basecolor2 h5">App Development</h3>
                   <p>We develop apps to meet your unique goals and target audience. Develop for iOS, Android and web using the latest technologies like Flutter and React Native.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -86,15 +90,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Quality-Assurance.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/Quality-Assurance.svg" />
                   </Box>
-                  <h4 className="basecolor2">Quality Assurance</h4>
+                  <h3 className="basecolor2 h5">Quality Assurance</h3>
                   <p>Quality Assurance (QA) ensures that your products, It is an integral part of the development lifecycle to maintain high reliability and user satisfaction.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={4} xs={12}>
+            <Grid  className="" item md={4} xs={6}>
               <div
                 className={
                   styles.box +
@@ -102,10 +106,10 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Email-Marketing-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/Email-Marketing-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Email Marketing</h4>
+                  <h3 className="basecolor2 h5">Email Marketing</h3>
                   <p>Boost Your Sales with Targeted Email Campaigns Unlock the Power of Email Marketing for Your Business .we specialize in creating and managing email campaigns that deliver results.</p>
                 </div>
               </div>

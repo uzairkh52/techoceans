@@ -63,14 +63,20 @@
       img {
         filter: brightness(0) invert(2);
       }
+      
     }
+    .icon {height: 60px;
+      img {
+         max-width: 100%;
+         max-height: 100%;
+      }
+   }
     h4 {
       font-size: 16px;
       font-weight: bold;
     }
     p {
       font-size: 14px;
-      font-weight: bold;
     }
   }
 }
@@ -95,7 +101,7 @@
 }
 @include for-mobile-large-screen {
    .Experties {
-      .box {height: auto;padding: 20px 15px;
+      .box {height: 100%;padding: 20px 15px;
       }
    }
   .HowitWork {

@@ -22,10 +22,10 @@ const Mission = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/mission-2222.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/mission-2222.svg" />
                   </Box>
-                  <h4 className="basecolor2">Innovation</h4>
+                  <h3 className="basecolor2 h5">Innovation</h3>
                   <p>Continuously pushing the boundaries of technology.</p>
                 </div>
               </div>
@@ -39,10 +39,10 @@ const Mission = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/mission-444.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/mission-444.svg" />
                   </Box>
-                  <h4 className="basecolor2">Quality</h4>
+                  <h3 className="basecolor2 h5">Quality</h3>
                   <p>Quality: Providing reliable, robust, and tested solutions.</p>
                 </div>
               </div>
@@ -55,10 +55,10 @@ const Mission = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/mission-111.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/mission-111.svg" />
                   </Box>
-                  <h4 className="basecolor2">Customer-Centric Approach</h4>
+                  <h3 className="basecolor2 h5">Customer-Centric Approach</h3>
                   <p>Focusing on understanding and meeting our clients’ needs.</p>
                 </div>
               </div>
@@ -71,10 +71,10 @@ const Mission = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/mission-3333.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/mission-3333.svg" />
                   </Box>
-                  <h4 className="basecolor2">Integrity</h4>
+                  <h3 className="basecolor2 h5">Integrity</h3>
                   <p>Ensuring transparent communication and ethical business practices.</p>
                 </div>
               </div>

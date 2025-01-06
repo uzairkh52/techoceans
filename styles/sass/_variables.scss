@@ -17,7 +17,7 @@ Colors - start
 
 @import "bourbon/bourbon";
 @import "_css3-mixins.scss";
-@import "fonts.scss";
+// @import "fonts.scss";
 
 // Primary color 1
 $basecolor: #444;
@@ -156,9 +156,11 @@ $grdpair2color2: #109800;
 /*===================================================================
 Fonts - start
 ===================================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-$primary-font: "Poppins", sans-serif !important;
-$secondary-font: "Nunito", sans-serif !important;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$primary-font: "Roboto", serif;
+$secondary-font: "Roboto", serif;
 
 $heading-font: $primary-font;
 // Icon font
@@ -181,8 +183,8 @@ $h1-mb: 26px;
 $h2-mb: 22px;
 $h3-mb: 20px;
 $h4-mb: 18px;
-$h5-mb: 17px;
-$h6-mb: 16px;
+$h5-mb: 16px;
+$h6-mb: 15px;
 
 $thin: 100;
 $light: 300;

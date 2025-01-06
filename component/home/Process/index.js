@@ -13,7 +13,7 @@ const Experties = (props) => {
           </h2>
         </div>
         <Grid container spacing={3} mt={3}>
-            <Grid  className="" item md={3} xs={12}>
+            <Grid  className="" item md={3} xs={6}>
               <div
                 className={
                   styles.box +
@@ -21,16 +21,16 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Research-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/Research-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Research</h4>
+                  <h3 className="basecolor2 h5">Research</h3>
                   <p>We look at how visitors interact with your site to improve usability and engagement.</p>
                 </div>
               </div>
             </Grid>
             {/*  */}
-            <Grid  className="" item md={3} xs={12}>
+            <Grid  className="" item md={3} xs={6}>
               <div
                 className={
                   styles.box +
@@ -38,15 +38,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/design-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/design-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Design</h4>
+                  <h3 className="basecolor2 h5">Design</h3>
                   <p>We focus on the needs of your audience to create seamless experiences.  Designs that enhance your brand identity and captivate consumers.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={3} xs={12}>
+            <Grid  className="" item md={3} xs={6}>
               <div
                 className={
                   styles.box +
@@ -54,15 +54,15 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/Develope-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/Develope-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Develope</h4>
+                  <h3 className="basecolor2 h5">Develope</h3>
                   <p>We specialize in providing advanced services that help build responsive, high-performing websites.</p>
                 </div>
               </div>
             </Grid>
-            <Grid  className="" item md={3} xs={12}>
+            <Grid  className="" item md={3} xs={6}>
               <div
                 className={
                   styles.box +
@@ -70,10 +70,10 @@ const Experties = (props) => {
                 }
               >
                 <div>
-                  <Box className="mb-3" sx={{ mb: 2 }}>
-                    <img src="/images/test-icon.svg" />
+                  <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
+                    <img className="lozad" data-src="/images/test-icon.svg" />
                   </Box>
-                  <h4 className="basecolor2">Test</h4>
+                  <h3 className="basecolor2 h5">Test</h3>
                   <p>We specialize in comprehensive website testing that ensures your site works flawlessly on any device or browser.</p>
                 </div>
               </div>

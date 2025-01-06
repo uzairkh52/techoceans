@@ -96,6 +96,8 @@ const Blog = ({ data, metaDescript }) => {
   return (
     <>
       <Head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624182310549814"
+     crossorigin="anonymous"></script>
         <NextSeo
           title={data?.blog?.Title}
           description={metaDescript}

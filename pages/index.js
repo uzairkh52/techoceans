@@ -42,13 +42,12 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>Techoceans - web development | mobile app development | digital marketting | mobile app and website seo </title>
+      <title>Empowering Businesses with Customized Website Development, Mobile App Solutions, and Data-Driven SEO Services | Techoceans</title>
         <meta
          name="description"
-         content="Techoceans will do mobile app, website development and digital marketing seo in our all over the world"
-         />
-          <meta name="description" content="Web development, mobile app development, SEO services for your digital growth." />
-          <meta name="keywords" content="web development, mobile app development, SEO services, digital marketing" />
+         content="Grow your business with Tech Oceans! We provide professional website development, mobile app design, and SEO solutions that drive traffic, boost rankings, and deliver results. Transform your digital presence with our expert services."
+        />
+          <meta name="keywords" content="Website development services | Mobile app design solutions | SEO services for businesses | Professional digital marketing | Boost search rankings | Increase website traffic | Custom app development | Digital presence transformation | Online growth solutions | Responsive web design" />
           <meta name="author" content="Techoceans" />
           
          <script

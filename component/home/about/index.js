@@ -19,11 +19,11 @@ const About = () => {
                 
                   <Grid item md={6} xs={12}>
                     <div className={styles.whatIsWjImg + " align-center"}>
-                      <img
-                        src={"/images/website-wallpaper.png"}
+                      <img width={558} height={399}  alt="Techoceans is Your Partner in Digital Transformation"
+                        data-src={"/images/website-wallpaper.png"}
                         className={classNames(
                           styles.screenImg,
-                          "cursor-pointer"
+                          "cursor-pointer lozad"
                         )}
                       />
                     </div>
@@ -39,7 +39,8 @@ const About = () => {
                     <Link 
                       href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"}
                     >
-                      <img
+                    <span className="d-none">techoceans</span>
+                      <img  alt="techoceans"
                           src={"/images/phone-icon.svg"}
                           className={classNames(
                             styles.screenImg,

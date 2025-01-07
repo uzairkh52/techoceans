@@ -22,11 +22,10 @@ const Portfolio = (props) => {
                 }
               >
                 <div className="card-thumb">
-                <img src="/images/portfolio3.png" />
-                  
+                  <img width={"322"} height={"211"} alt="Metastore Dashboard Design for store Manager and Brand Manager" className="lozad" data-src="/images/portfolio3.png" />
                 </div>
                 <Box sx={{mt: 3}}>
-                     <h4 className="basecolor2">Metastore Dashboard Design for store Manager and Brand Manager </h4>
+                     <h4 className="basecolor2">Metastore Dashboard Design for store Manager and Brand Manager</h4>
                      <p>we delivered project for store manager and brand manager for our client this is the  dashboard of online platform for owners brand and stores</p>
                      <Box>
                         <div className="bold">Technology/tools</div>
@@ -54,7 +53,7 @@ const Portfolio = (props) => {
                 }
               >
                 <div className="card-thumb">
-                <img src="/images/portfolio1.png" />
+                <img width={"322"} height={"211"} alt="Technology/tools" className="lozad" data-src="/images/portfolio1.png" />
                   
                 </div>
                 <Box sx={{mt: 3}}>
@@ -85,11 +84,11 @@ const Portfolio = (props) => {
                 }
               >
                 <div className="card-thumb">
-                <img src="/images/portfolio2.png" />
+                <img width={"322"} height={"211"} alt="Dow University of Health Sciences University and Hospital Project" className="lozad" data-src="/images/portfolio2.png" />
                   
                 </div>
                 <Box sx={{mt: 3}}>
-                     <h4 className="basecolor2">Dow University of Health Sciences University and Hospital Project </h4>
+                     <h4 className="basecolor2">Dow University of Health Sciences University and Hospital Project</h4>
                      <p>we have done for dow university and hospital project we have done design and development successfully and still working on hospital part this is our big achievement</p>
                      <Box>
                         <div className="bold">Technology/tools</div>

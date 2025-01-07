@@ -56,18 +56,9 @@ const BlogBox = (props) => {
                   <Link className="text-decoration-none "
                      href={"blog/"+props.data.slug}
                   >
-                     <h4 className="mb-0 basecolor2">{props.data.Title}</h4>
+                     <h3 className="h5 mb-0 basecolor2">{props.data.Title}</h3>
                   </Link>
                   <p>{previewContent}</p>
-               </Box>
-               <Box className="d-flex justify-content-end" sx={{mt:3}}>
-                  <Link
-                     className={ "  align-center text-decoration-none d-flex"}
-                     href={"blog/"+props.data.slug}
-                  >
-                     <span>Read more </span> <i className="icofont icofont-long-arrow-right f30"></i>
-                  </Link>
-
                </Box>
             </Box>
          </Card>

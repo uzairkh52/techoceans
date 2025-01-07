@@ -50,9 +50,6 @@ const Header = () => {
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/fav-icon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
       </Head>
       {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>
@@ -73,6 +70,7 @@ const Header = () => {
               <div className={" d-flex justify-content-between align-items-center"}>
                 <div className={styles.Logo}>
                   <Link href={"/"}>
+                  <span className="d-none">Techoceans</span>
                     <svg
                       width="166"
                       height="50"
@@ -185,6 +183,7 @@ const Header = () => {
         }
         href={"https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130"}
       >
+      <span className="d-none">techoceans whatsapp</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1219.547 1225.016"

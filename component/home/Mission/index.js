@@ -23,7 +23,7 @@ const Mission = (props) => {
               >
                 <div>
                   <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
-                    <img className="lozad" data-src="/images/mission-2222.svg" />
+                    <img alt="Innovation" className="lozad" data-src="/images/mission-2222.svg" />
                   </Box>
                   <h3 className="basecolor2 h5">Innovation</h3>
                   <p>Continuously pushing the boundaries of technology.</p>
@@ -40,7 +40,7 @@ const Mission = (props) => {
               >
                 <div>
                   <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
-                    <img className="lozad" data-src="/images/mission-444.svg" />
+                    <img alt="Quality" className="lozad" data-src="/images/mission-444.svg" />
                   </Box>
                   <h3 className="basecolor2 h5">Quality</h3>
                   <p>Quality: Providing reliable, robust, and tested solutions.</p>
@@ -56,7 +56,7 @@ const Mission = (props) => {
               >
                 <div>
                   <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
-                    <img className="lozad" data-src="/images/mission-111.svg" />
+                    <img alt="Customer-Centric Approach" className="lozad" data-src="/images/mission-111.svg" />
                   </Box>
                   <h3 className="basecolor2 h5">Customer-Centric Approach</h3>
                   <p>Focusing on understanding and meeting our clients’ needs.</p>
@@ -72,7 +72,7 @@ const Mission = (props) => {
               >
                 <div>
                   <Box className={styles.icon + " mb-3"} sx={{ mb: 2 }}>
-                    <img className="lozad" data-src="/images/mission-3333.svg" />
+                    <img alt="Integrity" className="lozad" data-src="/images/mission-3333.svg" />
                   </Box>
                   <h3 className="basecolor2 h5">Integrity</h3>
                   <p>Ensuring transparent communication and ethical business practices.</p>

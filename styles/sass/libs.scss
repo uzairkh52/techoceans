@@ -612,9 +612,7 @@ p {
 .bc1-lightester-bg:not(.button) {
   background-color: $bc1-lightester !important;
 }
-.basecolor2:not(.button) {
-  color: $basecolor2 !important;
-}
+
 .basecolor2-bg:not(.button) {
   background-color: $basecolor2 !important;
 }
@@ -2010,7 +2008,7 @@ textarea {
 .bg-repeaty {
   background-repeat: repeat-y !important;
 }
-.hide,
+.d-none, .hide,
 .dp-none {
   display: none;
 }

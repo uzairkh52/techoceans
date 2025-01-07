@@ -57,7 +57,7 @@ const Footer = () => {
             </Grid>
             <Grid  className="" item md={4} xs={12}>
               <div>
-                <h4 className="white bold">Resources</h4>
+                <h2 className="h4 white bold">Resources</h2>
                 <ul className="no-list hgroup">
                   <li>
                     <Link href="/blog">
@@ -89,7 +89,7 @@ const Footer = () => {
             </Grid>
             <Grid  className="" item md={4} xs={12}>
               <div>
-                <h4 className="white bold">About</h4>
+                <h2 className="h4 white bold">About</h2>
                 <ul className="no-list mb-30">
                 <li>
                     <Link href={"/contact"}>

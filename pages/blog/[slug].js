@@ -171,8 +171,8 @@ const Blog = ({ data, metaDescript }) => {
                         </div>
                         <Link href="https://wa.me/03472696576?text=please%20visit%20our%20facebook%20page%20for%20more%20detail%20you%20want%20to%20purchase%20anything%20just%20message%20inbox%20on%20whatsapp%20chat%20or%20call%20we%20will%20response%20quick%0Ahttps://www.facebook.com/profile.php?id=61568919442130">
                           <img alt="{data?.blog?.Title}"
-                            data-src="/images/phone-icon.svg"
-                            className="lozad cursor-pointer shadow-xs"
+                            src="/images/phone-icon.svg"
+                            className={styles.lozad +  " lozad cursor-pointer shadow-xs"}
                           />
                         </Link>
                       </Box>

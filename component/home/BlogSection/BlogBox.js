@@ -42,7 +42,7 @@ const BlogBox = (props) => {
             <Link className="text-decoration-none "
                href={"blog/"+props.data.slug}
             >
-               <div  aria-label={props.data.Title} className={styles.cardThumb + " bg-cover bg-center bg-norepeat"} style={{backgroundImage:`url(${props.data.featuredImage})`}}>
+               <div  aria-label={props.data.Title} className={styles.cardThumb + " bg-cover bg-center bg-norepeat"} data-src={props.data.featuredImage} style={{backgroundImage:`url(${props.data.featuredImage})`}}>
                </div>
             </Link>
             <Box sx={{mt: 3}}>
